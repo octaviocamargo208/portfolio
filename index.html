@@ -23,14 +23,31 @@
   <script src="https://kit.fontawesome.com/1232f21ad7.js" crossorigin="anonymous"></script>
   <style>
     .foto-perfil {
-      height: 100%;
+      cursor: pointer;
+      position:center;
+      height: auto;
       width: auto;
+      
+      border-radius: 100%;
+      border-color: white;
+      border-width:5px;
+      border-style:solid;
+      filter: grayscale(40%);
+      transition: all 850ms;
       max-width: 100%;
-      border-radius: 50%;
+      
+    }
+ 
+    .foto-perfil:hover
+    {
+      transform: rotate(360deg);
+      filter:grayscale(0%);
     }
 
     .corPrimaria {
-      background-color: #4682B4;
+      background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
     }
 
     .corSecundaria {
@@ -61,7 +78,7 @@
       padding-bottom: 20px;
       text-transform: uppercase;
       font-weight: 700;
-      color: #4682B4;
+      color: #0093E9;
     }
 
     .textoBranco {
@@ -80,6 +97,45 @@
 
     html {
       scroll-behavior: smooth;
+    }
+    .btns
+    {
+      text-align:center;
+      margin-top: 50px;
+    }
+    .efeito
+    {
+      border:none;
+      color:#ffffff;
+      padding:10px;
+      margin:10px;
+      font-size:24px;
+      line-height:24px;
+      border-radius: 10px;
+      position:relative;
+      box-sizing:border-box;
+      cursor:pointer;
+      transition: all 400ms ease;
+    }
+    .efeito1
+    {
+      background-color:#212529;
+    }
+    .efeito1:before
+    {
+      content:'';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 0px;
+      height:100%;
+      background: rgba(255,255,255,0.3);
+      border-radius: 10px;
+      transition: all 2s ease;
+    }
+    .efeito1:hover:before
+    {
+      width:100%;
     }
   </style>
 </head>
@@ -117,11 +173,11 @@
     <div class="container">
 
 <!--Projeto 1-->
-      <img class="foto-perfil" src="https://i.ibb.co/M64Znzz/octavio.jpg"><img alt="">
+     <a href="#sobre-mim"><img class="foto-perfil" src="https://i.ibb.co/M64Znzz/octavio.jpg"><img alt=""></a>
       <h1 class="jumbotron-heading textoBranco">Octávio Kaik Camargo das Neves</h1>
       <p class="lead textoBranco">Desenvolvedor de software - Desenvolvedor web - Aluno</p>
       <p>
-        <a href="#contato" class="btn btn-dark my-2">Contato</a>
+        <a href="#contato" class=" btns efeito efeito1">Contato</a>
       </p>
       <a href="https://www.linkedin.com/in/octavio-camargo"><i class="fab fa-linkedin textoBranco"> </i></a>
       <a href="https://github.com/octaviocamargo208"><i class=" icones fab fa-github textoBranco"> </i></a>
